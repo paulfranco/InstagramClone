@@ -139,7 +139,7 @@ public class UserListActivity extends AppCompatActivity {
         userListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent intent = new Intent(getApplicationContext(), UserListActivity.class);
+                Intent intent = new Intent(getApplicationContext(), UserFeedActivity.class);
                 intent.putExtra("username", usernames.get(i));
                 startActivity(intent);
             }
