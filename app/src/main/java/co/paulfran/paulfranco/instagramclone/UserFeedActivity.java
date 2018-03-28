@@ -23,6 +23,7 @@ public class UserFeedActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_user_feed);
 
         final LinearLayout linearLayout = (LinearLayout) findViewById(R.id.linearLayout);
@@ -36,6 +37,7 @@ public class UserFeedActivity extends AppCompatActivity {
         ParseQuery<ParseObject> query = new ParseQuery<ParseObject>("Image");
 
         query.whereEqualTo("username", activeUsername);
+
         query.orderByDescending("createdAt");
 
         query.findInBackground(new FindCallback<ParseObject>() {
@@ -68,10 +70,6 @@ public class UserFeedActivity extends AppCompatActivity {
                 }
             }
         });
-
-
-
-
 
     }
 }
