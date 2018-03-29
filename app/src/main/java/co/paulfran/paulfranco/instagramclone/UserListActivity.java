@@ -160,7 +160,7 @@ public class UserListActivity extends AppCompatActivity {
                if (e == null) {
                    if (objects.size() > 0) {
                        for (ParseUser user : objects) {
-                            usernames.add(user.getClassName());
+                            usernames.add(user.getUsername());
                        }
                        userListView.setAdapter(arrayAdapter);
                    }
